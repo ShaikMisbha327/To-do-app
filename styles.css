@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background-image: url("https://i.pinimg.com/564x/b7/37/1c/b7371c56aef430f48a72a6ef6e60d418.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+     background-color: rgba(232, 181, 230, 0.8); 
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(249, 250, 250, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+    width: 100%;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+li {
+    padding: 10px;
+    background-color: #f8f9fa;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+li:nth-child(odd) {
+    background-color: #e9ecef;
+}
+
+.task-text {
+    flex-grow: 1;
+    word-break: break-word; /* Wrap long text */
+}
+
+li div {
+    display: flex;
+    gap: 10px;
+}
+
+li button {
+    background-color: transparent;
+    border: none;
+    color: #007bff;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+li button.edit {
+    color: #ffc107;
+}
+
+li button.delete {
+    color: #dc3545;
+}
+
+li button:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    /* .input-container {
+        flex-direction: column;
+        gap: 10px;
+    } */
+
+    input[type="text"] {
+        width: 100%;
+    }
+
+    button {
+        width: auto;
+    }
+
+    li {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    li .task-text {
+        flex-grow: 1;
+    }
+
+    li div {
+        justify-content: flex-end;
+        gap: 10px;
+    }
+
+    li button {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    input[type="text"] {
+        font-size: 1.25rem;
+    }
+
+    button {
+        font-size: 1.25rem;
+    }
+}
